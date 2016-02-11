@@ -1,4 +1,7 @@
 class Task < ActiveRecord::Base
+
+  belongs_to :list
+
   def toggle_complete!
     update(complete: !complete)
   end
